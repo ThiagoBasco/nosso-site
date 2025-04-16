@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigos Conectados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="logo">Amigos+</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#amigos">Amigos</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Principal -->
+    <header id="inicio" class="hero">
+        <div class="hero-text">
+            <h1>Thiago, Gabriela, Rafael e Pedro</h1>
+            <p>Uma amizade futurista que transcende códigos e memes!</p>
+            <a href="#amigos" class="btn">Conheça a galera</a>
+        </div>
+    </header>
+
+    <!-- Seção de Amigos -->
+    <section id="amigos" class="amigos">
+        <h2>Nossos Amigos</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Thiago</h3>
+                <p>Criador de ideias mirabolantes e piadas nonsense.</p>
+            </div>
+            <div class="card">
+                <h3>Gabriela</h3>
+                <p>Rainha da programação e das mensagens codificadas.</p>
+            </div>
+            <div class="card">
+                <h3>Rafael</h3>
+                <p>Especialista em memes e zoeiras digitais.</p>
+            </div>
+            <div class="card">
+                <h3>Pedro</h3>
+                <p>O planejador estratégico e mestre dos esquemas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abas Interativas -->
+    <section id="curiosidades" class="tabs-section">
+        <h2>Explore Mais</h2>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('amizade')">Amizade É Tudo</button>
+            <button class="tab-btn" onclick="showTab('piadas')">Piadas Ruins</button>
+            <button class="tab-btn" onclick="showTab('planos')">Planos Malucos</button>
+        </div>
+
+        <div id="amizade" class="tab-content active">
+            <p>Nossa conexão é tão forte quanto a gravidade quântica. Somos como partículas emaranhadas, sempre conectados!</p>
+        </div>
+
+        <div id="piadas" class="tab-content">
+            <p>Por que o Thiago levou o notebook pro banheiro? Porque queria navegar na privada!</p>
+            <p>Gabriela tentou programar um brigadeiro... mas o código estava doce demais.</p>
+        </div>
+
+        <div id="planos" class="tab-content">
+            <p>1. Criar um parque digital flutuante.</p>
+            <p>2. Construir um robô contador de piadas ruins.</p>
+            <p>3. Hackear a Matrix — já estamos quase lá.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <div class="footer-content">
+            <p>&copy; 2025 Amigos+. Todos os direitos reservados.</p>
+            <p>Contato: amigos@futuro.com</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
